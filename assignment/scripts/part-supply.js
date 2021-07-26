@@ -66,6 +66,19 @@ for( x of supplyChanges ){
 
 // 8. Rewrite the `for` loop from #6 as a `while` loop.
 console.log('8. Showing supplyChanges with "while" loop');
+while( x < supplyChanges.length ){
+    console.log('in the while loop', supplyChanges[x]);
+    x++;
+    if( x > 0){
+        console.log('Added', x, 'parts');
+    }
+    else if(x===0){
+        console.log('No change!');
+    }
+    else if(x<0){
+        console.log('Removed', x , 'parts');
+    }
+}
 
 
 // 9. Write a loop to determine the total number of parts available by
