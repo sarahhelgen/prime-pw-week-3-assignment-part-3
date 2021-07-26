@@ -34,6 +34,24 @@ console.log(supplyChanges);
 //    - if the value is 0, log 'No Change.'
 //    - if the value is negative, format the log as 'Removed x parts.' 
 console.log('6. Showing supplyChanges...');
+for( let x=0; x<supplyChanges.length; x++ ){
+    console.log(x);
+    if(supplyChanges[x]>0){
+        console.log('Added', x, 'parts' )
+    }//end check
+    else if(supplyChanges[x]===0){
+        console.log('No change!');
+    }//end check
+    else if(supplyChanges[x]<0){
+        console.log('Removed', x, 'parts');
+    }//end check
+}//end for loop
+
+
+// STRETCH GOALS
+console.log('---  Stretch Goals  ---');
+// 7. Rewrite the `for` loop from #6 as a `for of` loop. 
+console.log('7. Showing supplyChanges with "for of" loop');
 for( x of supplyChanges ){
     if(x>0){
         console.log('Added', x, 'parts' )
@@ -46,11 +64,6 @@ for( x of supplyChanges ){
     }//end check
 }//end for loop
 
-
-// STRETCH GOALS
-console.log('---  Stretch Goals  ---');
-// 7. Rewrite the `for` loop from #6 as a `for of` loop. 
-console.log('7. Showing supplyChanges with "for of" loop');
 
 // 8. Rewrite the `for` loop from #6 as a `while` loop.
 console.log('8. Showing supplyChanges with "while" loop');
