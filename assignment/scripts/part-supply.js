@@ -89,4 +89,4 @@ let sum = 0;
 for(let x=0; x<supplyChanges.length; x++ ){
     sum += supplyChanges[x];
 }
-console.log('The total supplies available is ', sum );
+console.log('The total parts available is ', sum );
