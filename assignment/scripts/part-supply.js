@@ -20,6 +20,7 @@ console.log( supplyChanges[1] );
 // 4. The last item was added by mistake. Remove it from the 'supplyChanges' 
 //    array & console.log the value removed.
 console.log('4. Removed item:');
+
 let lastItem = supplyChanges.pop();
 console.log('The removed item is', lastItem);
 
@@ -36,13 +37,13 @@ console.log(supplyChanges);
 console.log('6. Showing supplyChanges...');
 for(let x=0; x<supplyChanges.length; x++ ){
     if(supplyChanges[x] > 0){
-        console.log('Added', supplyChanges[x], 'parts.');
+        console.log(`Added ${supplyChanges[x]} parts.`);
     }//end first check
     else if(supplyChanges[x] === 0){
         console.log('No change.');
     }//end second check
     else if(supplyChanges[x] < 0){
-        console.log('Removed', supplyChanges[x] ,'parts');
+        console.log(`Removed' ${supplyChanges[x]} parts`);
     }//end third check
 }//end for
 
@@ -53,13 +54,13 @@ console.log('---  Stretch Goals  ---');
 console.log('7. Showing supplyChanges with "for of" loop');
 for( x of supplyChanges ){
     if(x>0){
-        console.log('Added', x, 'parts' )
+        console.log(`Added ${x} parts` )
     }//end check
     else if(x===0){
         console.log('No change!');
     }//end check
     else if(x<0){
-        console.log('Removed', x, 'parts');
+        console.log(`Removed x${x} parts`);
     }//end check
 }//end for loop
 
@@ -70,13 +71,13 @@ while( x < supplyChanges.length ){
     console.log('in the while loop', supplyChanges[x]);
     x++;
     if( x > 0){
-        console.log('Added', x, 'parts');
+        console.log(`Added ${x} parts`);
     }
     else if(x===0){
         console.log('No change!');
     }
     else if(x<0){
-        console.log('Removed', x , 'parts');
+        console.log(`Removed ${x} parts`);
     }
 }
 
@@ -89,4 +90,4 @@ let sum = 0;
 for(let x=0; x<supplyChanges.length; x++ ){
     sum += supplyChanges[x];
 }
-console.log('The total parts available is ', sum );
+console.log(`The total parts available is ${sum}` );
